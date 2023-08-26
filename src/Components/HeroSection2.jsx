@@ -7,7 +7,7 @@ import {BiSolidCheckShield} from 'react-icons/bi'
 
 const Wrapper = styled.section`
 padding: 2rem 0rem;
-font-size: 1.7rem;
+font-size: 1.3rem;
 .hero2div{
 
 display: flex;

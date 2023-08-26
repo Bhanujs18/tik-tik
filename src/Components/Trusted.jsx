@@ -11,8 +11,8 @@ const Wrapper = styled.section`
      padding: 1rem 7rem;
 .trustedimgs{
    
-    height: 12rem;
-    width: 12rem;
+    height: 9rem;
+    width: 9rem;
     
     &:hover{
     transform: scale(1.1);   

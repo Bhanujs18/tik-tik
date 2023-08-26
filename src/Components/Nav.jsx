@@ -61,6 +61,7 @@ font-size: 1.5rem;
       display: flex;
       align-items: center;
       gap:0.4rem;
+      background:none;
      }
 }
 
@@ -149,8 +150,20 @@ font-size: 1.5rem;
        
 
         .navbar-link {
+          background:
+        linear-gradient(black 0 0) 100% 0,
+        linear-gradient(black 0 0) 0 0,
+        linear-gradient(black 0 0) 0 100%,
+        linear-gradient(black 0 0) 100% 100%;
+        background-size: var(--d, 0) 3px, 3px var(--d, 0);
+        background-repeat: no-repeat;
+        transition: 0.5s;
           font-size: 1.2rem;
           color: black;
+          &:hover{
+            color: black;
+            --d: 100%; 
+        }
         }
         .cart-trolley{
           color: black;
@@ -235,6 +248,7 @@ const Nav = () => {
           <CgMenu
             name="menu-outline"
             className="mobile-nav-icon"
+            style={{color:"white"}}
             onClick={() => setMenuicon(true)}
           />
           <CgClose

@@ -10,7 +10,7 @@ color: white;
 
 .footerDiv{
     display:flex;
-    padding: 3rem;
+    padding: 1rem 3rem;
     align-items: center;
     justify-content: space-between;
     gap: 8rem;
@@ -85,10 +85,10 @@ const Footer = () => {
             </ul>
         </div>
         <div className="footer-div-sections">
-            <BsInstagram className='footer-icons'/>
-            <BsFacebook className='footer-icons'/>
-            <BsTwitter className='footer-icons'/>
-            <AiFillMessage className='footer-icons'/>
+        <a href='https://www.instagram.com/' style={{color: "white"}}><BsInstagram className='footer-icons' /></a>
+        <a href='https://www.facebook.com/' style={{color: "white"}}>    <BsFacebook className='footer-icons'/> </a>
+        <a href='https://www.twitter.com/' style={{color: "white"}}>    <BsTwitter className='footer-icons'/> </a>
+        <a href='https://www.gmail.com/' style={{color: "white"}}>     <AiFillMessage className='footer-icons'/></a>
         </div>
        
         <div className="footer-div-sections">
