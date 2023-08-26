@@ -6,14 +6,15 @@ import { NavLink } from 'react-router-dom';
 const Wrapper = styled.section  `
 display: block;
 padding : 2rem;
-
+color: black;
 .container{
- 
+  color: black;
  display: block;
 
 
           .product{
             display: flex;
+            color: black;
             align-items: center;
             padding-top: 1rem;
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -27,6 +28,7 @@ padding : 2rem;
    
                .productinfo{
                   padding: 1rem;
+                  color: black;
                   display: block;
                   align-items: start;
                   text-transform: uppercase;
@@ -36,6 +38,7 @@ padding : 2rem;
                                   display: flex;
                                 align-items: start;
                                 font-size: 2rem;
+                                color: black;
                                 border: none;
                                 text-decoration-color: white;
                                                             text-decoration-line: underline;
@@ -44,6 +47,7 @@ padding : 2rem;
                                 .desc{
                                   font-size: 1.2rem;
                                   display: flex;
+                                  color: black;
                                   justify-content: start;
                                 }
                                 .hide

@@ -112,6 +112,7 @@ const API = "https://api.pujakaitem.com/api/products";
 export const SingleProductPage = () => {
   const { singleProduct, isSingleLoading, getSingleProducts} = useContext(AppContext);
     const {id} = useParams();
+    
     const{
       name,
       company,

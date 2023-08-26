@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { CartContext } from '../context/cartContext';
 import {AiFillDelete} from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
@@ -137,7 +137,53 @@ const Cart = () => {
 
     const { removeItem , cart , clearcart ,total_amount } = useContext(CartContext);
     const {isAuthenticated , user} = useAuth0();
+
+    const loadScript = (src) => {
+      return new Promise((resovle) => {
+        const script = document.createElement("script");
+        script.src = src;
+  
+        script.onload = () => {
+          resovle(true);
+        };
+  
+        script.onerror = () => {
+          resovle(false);
+        };
+  
+        document.body.appendChild(script);
+      });
+    };
     
+
+    const displayRazorpay = async (amount) => {
+      const res = await loadScript(
+        "https://checkout.razorpay.com/v1/checkout.js"
+      );
+  
+      if (!res) {
+        alert("You are offline... Failed to load Razorpay SDK");
+        return;
+      }
+      const options = {
+        key: "rzp_test_Qkpjm8WUVjFfLA",
+        currency: "INR",
+        amount: amount * 100,
+        name: "TIK TIK",
+        description: "Thanks for purchasing",
+        image:
+          "./Images/Mainlogo.png",
+  
+        handler: function (response) {
+          alert(response.razorpay_payment_id+" Payment Successfully");
+        },
+        prefill: {
+          name: "TIK TIK",
+        },
+      };
+      const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
 
    
   return (
@@ -204,7 +250,7 @@ const Cart = () => {
                         <td className='totaltdright th_css'><FormatPrice price={total_amount+500} /></td>
                     </tr>
                    </table>
-                   <button className="mybutton">Pay and Place Order</button>
+                   <button className="mybutton" onClick={()=>displayRazorpay((total_amount+500)/100)}>Pay and Place Order</button>
                   </div>
                   </div>
                  </div>
