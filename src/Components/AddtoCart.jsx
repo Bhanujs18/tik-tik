@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import {AiOutlineMinus , AiOutlinePlus} from 'react-icons/ai';
 import { styled } from 'styled-components';
 import { CartContext } from '../context/cartContext';
+import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.section`
 .addtocarbox{
@@ -36,6 +37,7 @@ const { addedtocart} = useContext(CartContext);
         </div> : null}
         <div>
             <button onClick={()=>addedtocart(id, value, color,  product )} className='mybutton'> ADD TO CART</button>   
+            <NavLink to='/cart'><button className='mybutton'> GO TO CART</button> </NavLink>
         </div>
     </Wrapper>
   )
