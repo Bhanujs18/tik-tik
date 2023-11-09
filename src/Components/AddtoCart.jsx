@@ -42,8 +42,10 @@ const { addedtocart} = useContext(CartContext);
         <AiOutlinePlus onClick={()=>setValue(value+1<=stock? value+1 : value )}/>
         </div> : null}
         <div className='buttons'>
-            <button onClick={()=>addedtocart(id, value, color,  product )} style={{display:'flex',alignItems:'center'}} className='mybutton'><img style={{height:'1rem' , width:'1rem'}} src=' https://res.cloudinary.com/dyqynjew8/image/upload/v1699453842/icons8-add-48_frewww.png' />  ADD TO CART</button>   
-            <NavLink to='/cart'><button className='mybutton' style={{display:'flex',alignItems:'center'}} ><img style={{height:'1rem' , width:'1rem'}} src='https://res.cloudinary.com/dyqynjew8/image/upload/v1699453662/icons8-cart-48_gxuemy.png' />  GO TO CART</button> </NavLink>
+            <button onClick={()=>addedtocart(id, value, color,  product )} style={{display:'flex',alignItems:'center'}} className='mybutton'><img style={{height:'1rem' , width:'1rem'}} alt='img' src='https://res.cloudinary.com/dyqynjew8/image/upload/v1699453842/icons8-add-48_frewww.png' />  ADD TO CART</button>   
+            <NavLink to='/cart'><button className='mybutton' style={{display:'flex',alignItems:'center'}} ><img style={{height:'1rem' , width:'1rem'}} alt='img' src='https://res.cloudinary.com/dyqynjew8/image/upload/v1699453662/icons8-cart-48_gxuemy.png' />  GO TO CART</button> </NavLink>
+
+       
         </div>
     </Wrapper>
   )
