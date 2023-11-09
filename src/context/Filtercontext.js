@@ -15,7 +15,7 @@ const initialState = {
 };
 
 const FilterContextProvider=({children})=>{
-
+  
   const [state, dispatch] = useReducer(reducer, initialState);
 
    const { products } =  useContext(AppContext);
@@ -28,7 +28,6 @@ const FilterContextProvider=({children})=>{
     {
     return dispatch({type:"LIST_VIEW"});
     }
-
 
     const catWise = (event) => {
         let name = event.target.name;

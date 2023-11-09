@@ -6,21 +6,23 @@ import {BiTimer} from 'react-icons/bi';
 import {BiSolidCheckShield} from 'react-icons/bi'
 
 const Wrapper = styled.section`
-padding: 2rem 0rem;
-font-size: 1.3rem;
+font-size: 1rem;
+margin:0;
+background-color:  ${({theme})=>theme.colors.themecolor};
+padding:0;
 .hero2div{
 
 display: flex;
 flex-direction: row;
 justify-content: center;
 gap: 6rem;
-background-color: #7A918D; 
+background-color:  ${({theme})=>theme.colors.themecolor}; 
 
 align-items: center;
 color: white;
 
 .heroSection-1-grids{
-padding: 2rem;
+padding: 1rem;
 
 margin: 8px;   
 border-radius: 4%;

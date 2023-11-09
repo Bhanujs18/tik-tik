@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 const AppContext = createContext();
 
-const API = "https://api.pujakaitem.com/api/products";
+const API = "https://bhanujs18.github.io/tik-tik-api/data.json";
 
 const initialState = {
   isLoading: false,
@@ -35,7 +35,7 @@ const AppProvider = ({children}) => {
     const getSingleProducts = async(url)=>{
       dispatch({type : "SINGLELOADING..."})
       try{
-       const res = await axios.get(url)
+       const res = await axios.get("https://api.pujakaitem.com/api/products/")
        const singleProduct = await res.data;
        dispatch({type:"SINGLE DATA", payload: singleProduct});
       }catch(error){

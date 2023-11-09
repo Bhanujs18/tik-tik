@@ -1,6 +1,6 @@
 import React from "react";
-import {TiInfoLarge} from 'react-icons/ti';
-import PageHeading from "../Components/PageHeading";
+// import {TiInfoLarge} from 'react-icons/ti';
+// import PageHeading from "../Components/PageHeading";
 import { styled } from "styled-components";
 
 const Wrapper = styled.section`
@@ -62,10 +62,10 @@ const About = () =>{
 
     return(
         <Wrapper>
-            <div className="contactTitle" >
-        <PageHeading name="About Us" />
+           {/* <div className="contactTitle" >
+        <PageHeading name="About Us" /> 
         <TiInfoLarge />
-            </div>
+            </div>  */}
             <div className="whoweare">
             <div className="paradiv">
             <h1 className="parahead">Who We Are</h1>

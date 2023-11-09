@@ -14,7 +14,7 @@ import { FilterContext } from '../context/Filtercontext';
   .catdiv{
     display: flex;
     justify-content: center;
-  
+    
   .categories{
     padding: 1rem;
     display: block;
@@ -27,28 +27,22 @@ import { FilterContext } from '../context/Filtercontext';
       font-size: 1.2rem;
       display: flex;
       align-items: center;
-      justify-content: justify;
+      justify-content: center;
       padding: 1rem;
-      color: white;
-      background-color: transparent;
+      background-color: white;
       border: none;
       width: 9rem;
       cursor: pointer;
-    } 
-    .category:focus{
-      color: white;
-      background-color: #117CB8;
-      border-radius: 11px;
+    
     }
-  
   }
 }
   .prdouctlist{
-    width: 100%;
+    width: 80%;
   }
   }
 
-  @media(max-width: 100px){
+  @media(max-width: 1300px){
     .container{
       display: block;
       .catdiv{
@@ -60,10 +54,7 @@ import { FilterContext } from '../context/Filtercontext';
 
 const Products = () => {
 
-// const [select , setSelect] = useState("All")
-
-const {all_products  ,catWise} = useContext(FilterContext); 
-
+  const {all_products  ,catWise} = useContext(FilterContext); 
 
   const getUniquedata = (data , property) =>{
     let newval = data.map((cur)=>{
@@ -81,8 +72,8 @@ const uniqueCat = getUniquedata(all_products,"category");
      <div className='container'>
             <div className='catdiv'>
             
-             <div style={{backgroundColor:'black'}} className='categories'>
-               <h1 style={{color:'white'}}>Categories</h1>
+             <div className='categories'>
+               <h1>Categories</h1>
                  {uniqueCat.map((curElem, index) => {
                   return (
                     <div>
@@ -98,9 +89,8 @@ const uniqueCat = getUniquedata(all_products,"category");
                      )})}
                    </div>
               </div>
-               <div className="prdouctlist">
-              
-                 <ProductList  />
+               <div>
+                 <ProductList />
                </div>
       
           </div>

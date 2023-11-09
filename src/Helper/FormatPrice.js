@@ -6,4 +6,4 @@ const FormatPrice = ({ price }) => {
     }).format(price/100);
   };
   
-  export default FormatPrice;
+  export default FormatPrice;;

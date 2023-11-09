@@ -9,14 +9,14 @@ const Wrapper = styled.section`
     .imgselect{
     .imgss{
         display: flex;
-        height : 9rem;
-        width: 14rem;
+        height : 6rem;
+        width: 9rem;
     }
   }
     .imgsss{
         display: flex;
-        height : 29rem;
-        width: 40rem;
+        height : 19rem;
+        width: 25rem;
     }
 
     @media(max-width: 938px){

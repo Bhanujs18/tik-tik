@@ -6,26 +6,29 @@ import { styled } from 'styled-components';
 
 const Wrapper = styled.section`
 display: flex;
+transition: all 0.3s ease;
 align-items: center;
 justify-content: space-between;
-border: 2px solid ${({theme})=>theme.colors.mainColor};
+background-color: black;
 padding: 0.5rem;
-
+ p{
+  color : white;
+ }
 
 .listbox{
 display: flex;
 align-items: center;
 justify-content: center;
-border: 2px solid ${({theme})=>theme.colors.mainColor};
+border: 2px solid black;
 width: max-content;
 .sortIcon{
     font-size: 2.3rem;
     padding: 0.5rem;
     cursor: pointer;
-    color : ${({theme})=>theme.colors.mainColor};
+    color : ${({theme})=>theme.colors.themecolor};
 }
 .active{
-    background-color: ${({theme})=>theme.colors.mainColor};
+    background-color: ${({theme})=>theme.colors.themecolor};
     color: white;
 }
 }

@@ -18,13 +18,13 @@ function App() {
   const theme = {
     colors : { 
       FontFace: "Kanit, sans-serif",
-      mainColor: "#7A918D",
-     
+      mainColor: "black",
+      themecolor: "#0877B6",
       fontSize: "2rem",
     },
     media : {
       tab: "998px",
-      mobile: "1068px"
+      mobile: "1250px"
 
     }
   }

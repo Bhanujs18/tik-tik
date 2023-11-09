@@ -1,9 +1,10 @@
-import React from 'react'
-import { styled } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import FormatPrice from '../Helper/FormatPrice';
 import { NavLink } from 'react-router-dom';
 
-const Wrapper = styled.section  `
+const Wrapper = styled.section`
+
 color: black;
 body {
     background-color: var(--var-main-darkest);
@@ -17,7 +18,6 @@ img {
 
 a {
     color: inherit;
-    text-decoration:none;
 }
 
 h1 {
@@ -41,13 +41,13 @@ span {
 }
 
 .card-container {
-    width: 90%;
-    display: flex;
+    width: 20rem;
     margin: 2em auto;
-    background-color: rgb(62,92,118,0.1);
+    background-color: white;
      border-radius: 15px;
     margin-bottom: 1rem;
     padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 div.flex-row {
@@ -88,15 +88,6 @@ img.eye {
   img.eye {
     max-width: 3em;
 }
-}
-.hero-image-container{
-  .hero-image{
-   height: 12rem;
-  }
-}
-.main-content{
-  text-align: left;
-  padding-left: 1rem;
 }
 
 .hero-image-container::after {
@@ -153,46 +144,35 @@ div.attribution {
 }
 `
 
-const ListView = ({products}) => {
+const FeatureCards = ({product}) => {
 
-
-   
-  
-    return (
-      <Wrapper> 
-        <div className='container' style={{display:"block"}}> 
-          {products.map((cur)=>{
-            return(
-                <NavLink to={`/singleproduct/${cur.id}`}>
-              <div>
+    const {id} = product;
+  return (
+    <Wrapper>
+<div>
   <div class="card-container">
-        <NavLink to={`/singleproduct/${cur.id}`} className="hero-image-container">
-        <img class="hero-image" src={cur.image} alt="Spinning glass cube"/>
+        <NavLink to={`/singleproduct/${id}`} className="hero-image-container">
+        <img class="hero-image" src={product.image} alt="Spinning glass cube"/>
         </NavLink>
        
       <main class="main-content">
-        <h1><a href="#" className='product_name'>{cur.name}</a></h1>
-        <p style={{fontSize:'1rem'}}>{cur.description.slice(0,100)}</p>
+        <h1><a href="#" className='product_name'>{product.name}</a></h1>
+        <p style={{fontSize:'1rem'}}>{product.description.slice(0,100)}</p>
         <div class="flex-row">
           <div class="coin-base">
             <img src="https://res.cloudinary.com/dyqynjew8/image/upload/v1699448075/icons8-rupee-48_ho7cwz.png" alt="img" class="small-image"/>
-            <p>{cur.price / 100}</p>/-
+            <p>{product.price / 100}</p>/-
           </div>
           <div class="time-left">
-            <img src="https://res.cloudinary.com/dyqynjew8/image/upload/v1699448126/icons8-clock_l9p77h.gif" alt="clock" class="small-image"/>
+            <img src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png" alt="clock" class="small-image"/>
             <p   style={{fontSize:'1rem'}}>3 days left</p>
           </div>
         </div>
       </main>
     </div>
     </div>
-
-                 </NavLink>
-            )
-          })}
-        </div>
-        </Wrapper>
-      )
+    </Wrapper>
+  )
 }
 
-export default ListView
+export default FeatureCards;

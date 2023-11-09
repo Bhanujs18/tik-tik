@@ -5,7 +5,7 @@ import {BsInstagram , BsFacebook , BsTwitter } from 'react-icons/bs';
 import {AiFillMessage} from 'react-icons/ai';
 
 const Wrapper = styled.section`
-background-color: #7A918D;
+background-color: ${({theme})=>theme.colors.themecolor};
 color: white;
 
 .footerDiv{
@@ -16,11 +16,11 @@ color: white;
     gap: 8rem;
 
     .footerlogo{
-        height: 15rem;
+        height: 7rem;
     }
 
     .footer-div-sections{
-        display: inline-block;
+        display: flex;
        
       .footer-links{
           display: flex;
@@ -34,9 +34,11 @@ color: white;
             display: flex;;
             font-size: 3rem;
             padding: 0.4rem;
+            transition: all 0.3s ease;
+
             &:hover{
                 transform: scale(1.2);   
-              
+              transition: all 0.3s ease;
                 }
         }        
          }
@@ -63,44 +65,21 @@ const Footer = () => {
   return (
     <Wrapper>
      <div className='footerDiv'>
-        <div className='footer-div-sections'  style={{display:"flex" , justifyContent:"center"}}>
-        <img alt="main-logo" src="./Images/Mainlogo.png" className='footerlogo' />
-        </div>
-        <div className='footerDiv'>
-         <div className="footer-div-sections none">
-            
-            <ul className='none'>
-            <li>
-            <NavLink className="footer-links" to='/'>Home</NavLink> 
-            </li>
-            <li>
-            <NavLink className="footer-links" to='/products'>Products</NavLink>
-            </li>
-            <li>
-            <NavLink className="footer-links" to='/about'>About Us</NavLink>
-            </li>
-            <li>
-            <NavLink className="footer-links" to='/contact'>Contact Us</NavLink>
-            </li>
-            </ul>
-        </div>
-        <div className="footer-div-sections">
+
+     <div className="footer-div-sections">
         <a href='https://www.instagram.com/' style={{color: "white"}}><BsInstagram className='footer-icons' /></a>
         <a href='https://www.facebook.com/' style={{color: "white"}}>    <BsFacebook className='footer-icons'/> </a>
         <a href='https://www.twitter.com/' style={{color: "white"}}>    <BsTwitter className='footer-icons'/> </a>
         <a href='https://www.gmail.com/' style={{color: "white"}}>     <AiFillMessage className='footer-icons'/></a>
         </div>
+
+        <div className='footer-div-sections'  style={{display:"flex" , justifyContent:"center"}}>
+        <img alt="main-logo" src="https://res.cloudinary.com/dyqynjew8/image/upload/v1699520492/Tik_Tik_ox0f8x.png" className='footerlogo' />
+        </div>
+      
+      
        
-        <div className="footer-div-sections">
-        <div className='none'>
-          <h1>Call Us</h1>
-                    <h1> +11 2143 23423,</h1>
-                    <h1> +11 2143 23423,</h1>
-                    <h1> +11 2143 23423,</h1>
-                    <h1> +11 2143 23423</h1>
-        </div>
-        </div>
-        </div>
+     
      </div>
      <p>© 2023 Tik Tik. All rights reserved</p>
     </Wrapper>

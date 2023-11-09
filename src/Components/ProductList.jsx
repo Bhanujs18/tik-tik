@@ -7,8 +7,7 @@ const ProductList = () => {
 
   
     const {list_view , grid_view , filter_products} = useContext(FilterContext);
-  
-
+         
       if(grid_view===true){
         return <GridView products={filter_products} />
       }

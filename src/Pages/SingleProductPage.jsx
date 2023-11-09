@@ -40,13 +40,15 @@ align-items: center;
       font-size: 4rem;
     }
     .desc{
-      font-size: 1rem;
+      font-size: 0.9rem;
       display: flex;
       justify-content: start;
     }
     .brand{
-      background-color: ${({theme})=>theme.colors.mainColor};
+      background-color: ${({theme})=>theme.colors.themecolor};
       color: white;
+      font-size: 0.9rem;
+      border-radius: 9px;
       width: max-content;
       padding:0.2rem 1rem;
     }
@@ -54,7 +56,7 @@ align-items: center;
   
 }
 
-@media(max-width: 1509px){
+@media(max-width: 1209px){
   .singlediv{
     display: flex;
     justify-content: center;

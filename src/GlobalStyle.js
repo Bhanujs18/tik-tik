@@ -16,13 +16,7 @@ export const GlobalSTyle = createGlobalStyle`
     width: 100vh;
     height: 100vh;
 }
-.mybutton{
-  padding: 0.7rem 1.5rem;
-  border: none;
-  background-color: black;
-  color: white;
-  margin: 1rem;
-}
+
 
 
 `
